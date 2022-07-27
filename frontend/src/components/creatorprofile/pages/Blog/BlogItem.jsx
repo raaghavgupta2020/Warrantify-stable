@@ -31,7 +31,7 @@ const BlogItem = (props) => {
         <p className="text-gray-400">{description}</p>
         <div className="flex justify-between" >
           <p>Amount {price} ETH</p>
-		  <p>Warranty Period {expiry}</p>
+		  <p>Warranty Period : {expiry} seconds</p>
           <button onClick={() => props.buyNft(props.blog)}>Buy Product</button>
         </div>
 			</div>

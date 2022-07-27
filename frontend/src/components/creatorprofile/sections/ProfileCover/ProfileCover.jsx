@@ -1,5 +1,5 @@
 import React from "react";
-import cover from "./../../../../images/flip7.jpg";
+import cover from "./../../../../images/123.PNG";
 
 function ProfileCover() {
   return (

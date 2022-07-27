@@ -89,7 +89,7 @@ export default function NFTMarketplaceMint() {
 		<>
 			<AdminNav />
 			<div className="flex justify-center">
-				<div className="w-1/2 flex flex-col pb-12">
+				<div className="w-1/2 flex flex-col pb-12 text-black">
 					<input
 						placeholder="Product Name"
 						className="mt-8 border rounded p-4"
@@ -146,10 +146,10 @@ export default function NFTMarketplaceMint() {
 						</div>
 					</div>
 
-					<input
+					<input 
 						type="file"
 						name="Asset"
-						className="my-4"
+						className="my-4 text-white"
 						onChange={onChange}
 					/>
 					{fileUrl &&

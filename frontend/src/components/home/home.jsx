@@ -11,6 +11,7 @@ import axios from "axios";
 import Web3Modal from "web3modal";
 import { creatorAddress } from "../../config";
 import CreatorNFT from "../../blockchain/artifacts/contracts/CreatorNFT.sol/CreatorNFT.json";
+// import '../home/home.css'
 
 function home() {
 	const [nfts, setNfts] = useState([]);
