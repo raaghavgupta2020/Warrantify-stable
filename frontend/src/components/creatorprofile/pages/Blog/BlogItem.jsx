@@ -30,9 +30,9 @@ const BlogItem = (props) => {
 				</h3>
         <p className="text-gray-400">{description}</p>
         <div className="flex justify-between" >
-          <p>{price} ETH</p>
-		  <p>expiry {expiry}</p>
-          <button onClick={() => props.buyNft(props.blog)}>Buy</button>
+          <p>Amount {price} ETH</p>
+		  <p>Warranty Period {expiry}</p>
+          <button onClick={() => props.buyNft(props.blog)}>Buy Product</button>
         </div>
 			</div>
 		</div>

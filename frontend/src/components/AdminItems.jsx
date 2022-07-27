@@ -55,11 +55,11 @@ export default function CreatorDashboard() {
             <AdminNav />
             {
                 loadingState === "loaded" && !nfts.length ? (
-                    <h1 className="py-10 px-20 text-3xl">No NFTs listed</h1>
+                    <h1 className="py-10 px-20 text-3xl">No products listed</h1>
                 ) : (
                     <div>
                         <div className="p-4">
-                            <h2 className="text-2xl py-2">Items Listed</h2>
+                            <h2 className="text-2xl py-2">Products listed</h2>
                             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-4">
                                 {nfts.map((nft, i) => (
                                     <div key={i} className="border shadow rounded-xl overflow-hidden">

@@ -41,8 +41,7 @@ contract NFTMarketplace is ERC721URIStorage {
     
     
     // burn the nft after a particular time
-    
-
+  
     modifier timerOver{
         require(block.timestamp<=_end, "The timer is over");
         _;
@@ -50,13 +49,14 @@ contract NFTMarketplace is ERC721URIStorage {
     function start() public{
         _start = block.timestamp;
     }
-
     function end(uint totalTime) public{
-        _end = totalTime+_start;
+        _end = totalTime + _start;
+        // _end = totalTime + block.timestamp;
     }
     function getTimeLeft() public timerOver view returns(uint){
-        return _end-block.timestamp;
+        return _end - block.timestamp;
     }
+
 
 
     /* Updates the listing price of the contract */
@@ -125,9 +125,7 @@ contract NFTMarketplace is ERC721URIStorage {
       ) public payable {
       uint price = idToMarketItem[tokenId].price;
       address seller = idToMarketItem[tokenId].seller;
-      require(msg.value == price, "Please submit the asking price in order to complete the purchase");
-      start();
-      end(price); 
+      require(msg.value == price, "Please submit the asking price in order to complete the purchase"); 
       idToMarketItem[tokenId].owner = payable(msg.sender);
       idToMarketItem[tokenId].sold = true;
       idToMarketItem[tokenId].seller = payable(address(0));
@@ -135,6 +133,8 @@ contract NFTMarketplace is ERC721URIStorage {
       _transfer(address(this), msg.sender, tokenId);
       payable(owner).transfer(listingPrice);
       payable(seller).transfer(msg.value);
+      start();
+      end(price);
     }
 
 
