@@ -88,8 +88,13 @@ export default function NFTMarketplaceMint() {
 	return (
 		<>
 			<AdminNav />
+
+
 			<div className="flex justify-center">
 				<div className="w-1/2 flex flex-col pb-12 text-black">
+
+				<h1 className="mt-10 font-bold leading-normal text-white">List your product with just as little as 0.025 eth</h1>
+
 					<input
 						placeholder="Product Name"
 						className="mt-8 border rounded p-4"
@@ -125,6 +130,8 @@ export default function NFTMarketplaceMint() {
 							updateFormInput({ ...formInput, price: e.target.value })
 						}
 					/> */}
+
+
 					<div>
 						<div className="flex mt-4 ">
 							<button
@@ -145,6 +152,8 @@ export default function NFTMarketplaceMint() {
 							</button>
 						</div>
 					</div>
+
+					<h1 className="mt-4 font-bold leading-normal text-white">Upload product image</h1>
 
 					<input 
 						type="file"

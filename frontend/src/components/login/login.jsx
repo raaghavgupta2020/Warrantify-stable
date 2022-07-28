@@ -48,28 +48,28 @@ function Login() {
 	return (
 		<header className="App-header">
 			{haveMetamask ? (
-				<div className="App-header text-black">
+				<div className="App-header text-black"> 
 					{isConnected ? (
-						<div className="card">
+						<div className="card text-center">
 							<div className="card-row">
-								<h3 className="text-black">Wallet Address:</h3>
-								<p className="text-black">
+								<h3 className="text-white">Wallet Address : {accountAddress}</h3>
+								{/* <p className="text-black">
 									{accountAddress.slice(0, 4)}...
 									{accountAddress.slice(38, 42)}
-								</p>
+								</p> */}
 							</div>
 							<div className="card-row">
-								<h3 className="text-black">Wallet Balance:</h3>
-								<p className="text-black">{accountBalance}</p>
+								<h3 className="text-white">Wallet Balance : {accountBalance}</h3>
+								{/* <p className="text-white">{accountBalance}</p> */}
 							</div>
-							<button className="bg-blue-500 text-xl hover:bg-blue-700 text-white mx-5 font-bold py-2 px-4 rounded" onClick={() => window.location.href = '/home'}>Explore</button>
+							<button className="bg-blue-500 text-xl hover:bg-blue-700 text-white mx-5 font-bold py-2 px-4 rounded" onClick={() => window.location.href = '/home'}>View brands</button>
 
 						</div>
 					) : (
 						<img src={logo} className="App-logo" alt="logo" />
 					)}
 					{isConnected ? (
-						<p className="info text-black">🎉 Connected Successfully</p>
+						<p className="info text-white">🎉Connected Successfully🎉</p>
 					) : (
 						<button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 text-xl rounded" onClick={connectWallet}>
 							Connect

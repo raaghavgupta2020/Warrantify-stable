@@ -84,7 +84,7 @@ export default function SignupForm() {
 			<AdminNav />
 			<div className="flex justify-center mt-20 items-center">
 				<div className="w-1/2 flex flex-col pb-12">
-					<h1>Add your company with just as little as 0.025 eth</h1>
+					<h1 className="font-bold leading-normal">Add your company with just as little as 0.025 eth</h1>
 					<input
 						placeholder="Company name"
 						className="mt-8 border rounded p-2"
@@ -94,7 +94,7 @@ export default function SignupForm() {
 					/>
 					<input
 						placeholder="Company email address"
-						className="mt-8 border rounded p-4"
+						className="mt-2 border rounded p-4"
 						onChange={(e) =>
 							updateFormInput({ ...formInput, email_id: e.target.value })
 						}
