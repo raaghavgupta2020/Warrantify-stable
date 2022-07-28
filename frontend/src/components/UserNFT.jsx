@@ -90,11 +90,15 @@ export default function UserNFT() {
                                                 <p>{nft.price} ETH</p>
                                             </div>
                                             <div class="duration">
-                                                <ins>◷</ins>
-                                                <p>{nft.expiry}</p>
+                                                <p><ins>◷</ins></p>
+                                                <br/>
+
+                                                {/* <p>{nft.expiry}</p> */}
+                                                <br />
                                                 {console.log(Number(nft.expiry))}
                                                 {/* <Countdown count={nft.expiry} /> */}
-                                                <Countdown date={Date.now() + Number(nft.expiry)*1000} />
+                                                
+                                                <Countdown className='font-bold' date={Date.now() + Number(nft.expiry)*1000} />
                                             </div>
                                         </div>
                                         <hr />
