@@ -1,5 +1,7 @@
 import { ethers } from 'ethers'
 import { useEffect, useState } from 'react'
+// import Countdown from './CountDown'
+import Countdown from 'react-countdown';
 import axios from 'axios'
 import Web3Modal from 'web3modal'
 import UNavbar from './UNavbar'
@@ -44,7 +46,8 @@ export default function UserNFT() {
                 owner: i.owner,
                 image: meta.data.image,
                 wallet_address: meta.data.wallet_address,
-                tokenURI
+                tokenURI,
+                expiry: meta.data.expiry
             }
             return item
         }))
@@ -88,7 +91,10 @@ export default function UserNFT() {
                                             </div>
                                             <div class="duration">
                                                 <ins>◷</ins>
-                                                <p>{nft.timerem}</p>
+                                                <p>{nft.expiry}</p>
+                                                {console.log(Number(nft.expiry))}
+                                                {/* <Countdown count={nft.expiry} /> */}
+                                                <Countdown date={Date.now() + Number(nft.expiry)*1000} />
                                             </div>
                                         </div>
                                         <hr />
