@@ -5,8 +5,8 @@ import { BsFillArrowRightCircleFill } from "react-icons/bs";
 export default function Subscribe() {
   return (
     <Section>
-      <div className="content">
-        <h2>Subscribe to get updates of all new products</h2>
+      <div className="pt-20 content">
+        <h2>Subscribe to get all new products updates</h2>
         <p>
           To get updates about SSG Guarantee and more 
           Subscribe to our newsletter and stay Updated!
@@ -16,7 +16,7 @@ export default function Subscribe() {
           <BsFillArrowRightCircleFill />
         </div>
       </div>
-      <div className="image">
+      <div className="w-full m-auto image">
         <img src={subscribe} alt="subscribe" />
       </div>
     </Section>
@@ -86,7 +86,7 @@ const Section = styled.section`
       justify-content: center;
       align-items: center;
       img {
-        height: 80vw;
+        height: 40vw;
       }
     }
     .content {

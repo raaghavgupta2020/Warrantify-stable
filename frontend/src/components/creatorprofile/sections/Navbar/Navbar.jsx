@@ -11,14 +11,14 @@ import Portfolio from "./../../pages/Portfolio/Portfolio";
 import Blog from "./../../pages/Blog/Blog";
 
 const navbarData = [
-	{
-		id: 3,
-		title: "Highlights",
-		to: "/works",
-	},
+	// {
+	// 	id: 3,
+	// 	title: "Highlights",
+	// 	to: "/works",
+	// },
 	{
 		id: 4,
-		title: "NFTs",
+		title: "Trending Products",
 		to: "/blogs",
 	},
 ];

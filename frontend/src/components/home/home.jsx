@@ -57,7 +57,7 @@ function home() {
 				<div>
 					<UNavbar />
 					<div>
-						<h1 className="text-2xl font-bold mx-10 mt-5">Creators</h1>
+						<h1 className="text-2xl font-bold mx-10 mt-5">TOP BRANDS</h1>
 						<section className="pb-10">
 							<div className="grid lg:grid-cols-3 grid-cols-1 md:px-4">
 								{nfts.map((nft, i) => (

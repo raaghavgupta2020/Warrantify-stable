@@ -7,17 +7,32 @@ import ownershhipp from "../assets/NFT.png"
 export default function Choose() {
   return (
     <Section>
+    <Section>
       <div className="image">
         {/* <img src="https://4.imimg.com/data4/PE/RW/MY-12597274/mobile-extended-warranty-from-assure-warranty-1000x1000.jpg" alt="choose" style={{width : '500px'}}/> */}
-        <img src={ownershhipp} alt="choose" style={{width : '500px'}}/>
+        <img src={ownershhipp} alt="choose" style={{width : '1000px' , height:'500px'}}/>
       </div>
       <div className="content">
         <h2>Why should you Choose Our Website ?</h2>
+
         <p>
-          Warrantify is the Website
+        NFTs cannot be falsified.
+A warranty on this NFT DApp is standardized, no matter who issued it or when.
+Finding bad-acting dealers will be simpler since it is easier to scan the blockchain for anomalous behaviors such as multiple warranty NFTs for the same product serial number.
         </p>
-        <Button text="Read More" blue />
+        
+        {/* <Button text="Read More" blue /> */}
       </div>
+    </Section>
+    {/* <Section>
+      <div>
+    <p>
+        NFTs cannot be falsified.
+A warranty on this NFT DApp is standardized, no matter who issued it or when.
+Finding bad-acting dealers will be simpler since it is easier to scan the blockchain for anomalous behaviors such as multiple warranty NFTs for the same product serial number.
+        </p>
+        </div>
+    </Section> */}
     </Section>
   );
 }

@@ -28,7 +28,7 @@ export default function Home() {
             <Button blue text="Get started" />
           </Link> 
           </div>
-          <div className="data">
+          {/* <div className="data">
             <div className="dataTab">
               <h2>10+</h2>
               <h5>Top Selling Brands</h5>
@@ -38,14 +38,14 @@ export default function Home() {
               <h5>Satisfied Customers</h5>
             </div>
             
-          </div>
+          </div> */}
         </div>
         <div className="image ">
           {/* <img src={hero} alt="hero" 
           style={ {height : '640px', width : '880px'}}
           /> */}
           <img src={unname} alt="hero" 
-          style={ {height : '640px', width : '880px'}}
+          style={ {height : '640px', width : '880px', top:'-60px' }}
           />
         </div>
       </div>
@@ -69,10 +69,12 @@ const Section = styled.section`
     position: absolute;
     bottom: -30%;
     left: -10%;
+    top:-50%;
     z-index: 1;
   }
   .container {
     padding: 2rem;
+    padding-top:1rem;
     margin: 0 2rem;
     display: flex;
     .content {
@@ -80,7 +82,7 @@ const Section = styled.section`
       display: flex;
       flex-direction: column;
       gap: 2rem;
-      margin-top: 5rem;
+      // margin-top: 5rem;
       padding-right: 2rem;
       h1 {
         color: white;
