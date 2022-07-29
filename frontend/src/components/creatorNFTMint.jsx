@@ -64,13 +64,17 @@ export default function NFTMarketplaceMint() {
 
 	async function listNFTForSale () {
 		const t1 = new Date();
-		console.log(t1.getTime());
-		await setDate1(t1.getTime());
+		console.log("t1 get time " + t1.getTime());
+		const str1 = new Date(t1.getTime());
+		console.log(str1.toString());
 		const t2 = new Date();
-		const h1 = t2.getHours();
-		console.log(h1+ Number(formInput.expiry));
-		const t3 = t2.getTime();
-		await setDate2(t3);
+		console.log("t1 get string " + t2.getTime());
+		const str2 = new Date(t2.getTime() + (1000 * 60 * formInput.expiry));
+		await setDate1(str2.getTime());
+		console.log("t2 get time " +str2.getTime());
+		console.log("t2 get string " +str2.toString());
+		
+		await setDate2(str2.toString());
 		console.log("date1" + date1);
 		console.log("date2" + date2);
 
