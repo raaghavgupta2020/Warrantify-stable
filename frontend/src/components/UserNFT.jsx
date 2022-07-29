@@ -13,7 +13,11 @@ import {
 
 import NFTMarketplace from '../blockchain/artifacts/contracts/NFTMarketplace.sol/NFTMarketplace.json'
 
-export default function UserNFT() {
+export default function UserNFT () {
+    const [date3, setDate3] = useState(new Date())
+    const [date4, setDate4] = useState(date3.getTime())
+    
+
     const [nfts, setNfts] = useState([])
     const [loadingState, setLoadingState] = useState('not-loaded')
     useEffect(() => {
@@ -30,11 +34,11 @@ export default function UserNFT() {
 
         const marketplaceContract = new ethers.Contract(marketplaceAddress, NFTMarketplace.abi, signer)
         const data = await marketplaceContract.fetchMyNFTs()
-        const timerem = await marketplaceContract.getTimeLeft()
+        // const timerem = await marketplaceContract.getTimeLeft()
         // const timerem1 = await marketplaceContract.getTimeLeft()
         // const timerem2 = await marketplaceContract.getTimeLeft()
         // const timerem3 = await marketplaceContract.getTimeLeft()
-        console.log("timerem" + timerem)
+        // console.log("timerem" + timerem)
         const items = await Promise.all(data.map(async i => {
             const tokenURI = await marketplaceContract.tokenURI(i.tokenId)
             const meta = await axios.get(tokenURI)
@@ -47,7 +51,9 @@ export default function UserNFT() {
                 image: meta.data.image,
                 wallet_address: meta.data.wallet_address,
                 tokenURI,
-                expiry: meta.data.expiry
+                expiry: meta.data.expiry,
+                date1: meta.data.date1,
+                date2: meta.data.date2,
             }
             return item
         }))
@@ -98,9 +104,13 @@ export default function UserNFT() {
                                                 {console.log(Number(nft.expiry))}
                                                 {/* <Countdown count={nft.expiry} /> */}
                                                 
-                                                <Countdown className='font-bold' date={Date.now() + Number(nft.expiry)*1000} />
+                                                {/* <Countdown className='font-bold' date={Date.now() + Number(nft.expiry)*1000} /> */}
                                             </div>
+                                            
                                         </div>
+                                        <p>bought: {nft.date1}</p>
+                                                <p>expiry: {nft.date2}</p>
+                                                <p>now: {date4}</p>
                                         <hr />
                                         
                                     </div>

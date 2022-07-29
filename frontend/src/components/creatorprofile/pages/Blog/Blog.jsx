@@ -39,7 +39,9 @@ const Blog = ( {wallet_address} ) => {
 					wallet_address: meta.data.wallet_address,
 					type: meta.data.type,
 					email_id: meta.data.email_id,
-					expiry: meta.data.expiry
+					expiry: meta.data.expiry,
+					date1: meta.data.date1,
+					date2: meta.data.date2,
 
 				};
 
