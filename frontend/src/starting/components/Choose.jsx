@@ -3,6 +3,7 @@ import styled from "styled-components";
 import choose from "../assets/choose.png";
 import Button from "./Button";
 import ownershhipp from "../assets/NFT.png"
+import man from "../assets/man2-removebg-preview.png";
 
 export default function Choose() {
   return (
@@ -10,7 +11,9 @@ export default function Choose() {
     <Section>
       <div className="image">
         {/* <img src="https://4.imimg.com/data4/PE/RW/MY-12597274/mobile-extended-warranty-from-assure-warranty-1000x1000.jpg" alt="choose" style={{width : '500px'}}/> */}
-        <img src={ownershhipp} alt="choose" style={{width : '1000px' , height:'500px'}}/>
+        {/* <img src={ownershhipp} alt="choose" style={{width : '1000px' , height:'500px'}}/> */}
+        <img src={man} alt="choose" style={{width : '1500px'}}/>
+
       </div>
       <div className="content">
         <h2>Why should you Choose Our Website ?</h2>
@@ -41,7 +44,8 @@ const Section = styled.section`
   display: flex;
   justify-content: center;
   align-content: center;
-  margin: 0 9rem;
+  // margin: 0 9rem;
+  margin-right:20px;
   gap: 3rem;
   margin-bottom: 5rem;
   .image {

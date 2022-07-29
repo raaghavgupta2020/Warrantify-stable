@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import subscribe from "../assets/subscribe.png";
+import man3 from "../assets/man3-removebg-preview.png";
+import man4 from "../assets/man4-removebg-preview.png";
 import { BsFillArrowRightCircleFill } from "react-icons/bs";
 export default function Subscribe() {
   return (
@@ -16,8 +18,8 @@ export default function Subscribe() {
           <BsFillArrowRightCircleFill />
         </div>
       </div>
-      <div className="w-full m-auto image">
-        <img src={subscribe} alt="subscribe" />
+      <div className="m-auto image">
+        <img src={man4} alt="subscribe" />
       </div>
     </Section>
   );
@@ -32,6 +34,8 @@ const Section = styled.section`
   margin-bottom: 5rem;
   .image {
     img {
+      width:1800px;
+      // heigth:1500px;
     }
   }
   .content {
@@ -42,6 +46,7 @@ const Section = styled.section`
     /* width: 50%; */
     h2 {
       font-size: 4rem;
+      width:390px;
     }
     p {
       color: #7b7e86;
