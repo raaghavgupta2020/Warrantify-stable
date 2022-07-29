@@ -2,7 +2,7 @@ import React from "react";
 import '../../../nft_card.css'
 
 const BlogItem = (props) => {
-	const { image, title, description, type, price, expiry } = props.blog;
+	const { image, title, description, type, price, expiry, date1, date2 } = props.blog;
 	return (
 		
 		<div className="w-full lg:w-1/2">
@@ -42,6 +42,7 @@ const BlogItem = (props) => {
           <p className="text-black">Amount {price} ETH</p>
 		  </div>
 		  <p className="text-black">Warranty Period : {expiry} seconds</p>
+				
           <button className="text-black border-2 rounded-lg pl-2 pr-2 " onClick={() => props.buyNft(props.blog)}>Buy Product</button>
         </div>
 		{/* </div> */}

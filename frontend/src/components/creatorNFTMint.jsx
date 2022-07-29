@@ -22,6 +22,8 @@ export default function NFTMarketplaceMint() {
 		wallet_address: "",
 		expiry: "",
 	});
+	const [date1, setDate1] = useState(0);
+	const [date2, setDate2] = useState(0);
 	const [nfttype, setNfttype] = useState(0);
 
 	async function onChange(e) {
@@ -47,6 +49,8 @@ export default function NFTMarketplaceMint() {
 			wallet_address: localStorage.getItem("wallet_address"),
 			type: nfttype,
 			expiry,
+			date1,
+			date2
 		});
 		try {
 			const added = await client.add(data);
@@ -58,7 +62,18 @@ export default function NFTMarketplaceMint() {
 		}
 	}
 
-	async function listNFTForSale() {
+	async function listNFTForSale () {
+		const t1 = new Date();
+		console.log(t1.getTime());
+		await setDate1(t1.getTime());
+		const t2 = new Date();
+		const h1 = t2.getHours();
+		console.log(h1+ Number(formInput.expiry));
+		const t3 = t2.getTime();
+		await setDate2(t3);
+		console.log("date1" + date1);
+		console.log("date2" + date2);
+
 		const url = await uploadToIPFS();
 		const web3Modal = new Web3Modal();
 		const connection = await web3Modal.connect();
