@@ -88,12 +88,12 @@ export default function UserNFT () {
                                     <div class='main'>
                                         <img class='tokenImage ml-6 object-contain h-32' src={nft.image} alt="NFT" />
                                         {/* <h2>Name: Gaandu</h2> */}
-                                        <p class='description break-words'>From: {nft.wallet_address} </p>
+                                        <p class='description break-words'>Owner: {nft.wallet_address} </p>
                                         {
                                             date4 > nft.date1 ? (
-                                                 <p class='description break-words'>To: 0x00000000000000 </p>
+                                                 <p class='description break-words'>Seller: 0x00000000000000 </p>
                                             ): (
-                                                <p class='description break-words'>To: {nft.owner} </p>
+                                                <p class='description break-words'>Seller: {nft.owner} </p>
                                             )
                                         }
                                         <div class='tokenInfo'>
