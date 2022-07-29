@@ -20,7 +20,7 @@ class App extends Component {
 				<Switch>
 					{/* <Route exact path="/" component={Common} /> */}
 					<Route exact path="/" component={Start} />
-					<Route exact path="/home" component={Common} />
+					<Route exact path="/landingPage" component={Common} />
 					<Route exact path="/loginuser" component={Login} />
 					<Route exact path="/logincreator" component={CreatorLogin} />
 					<Route exact path="/signupform" component={SignupForm} />

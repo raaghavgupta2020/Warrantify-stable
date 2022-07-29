@@ -24,7 +24,7 @@ export default function Home() {
             Transfer your warranty cards to your loved ones
           </p>
           <div className="buttons">
-          <Link to="/home">
+          <Link to="/landingPage">
             <Button blue text="Get started" />
           </Link> 
           </div>
