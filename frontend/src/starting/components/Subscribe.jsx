@@ -48,6 +48,7 @@ const Section = styled.section`
       line-height: 2rem;
     }
     .input-container {
+      color:black;
       padding: 0.5rem;
       display: flex;
       justify-content: center;
@@ -61,8 +62,12 @@ const Section = styled.section`
         &:focus {
           outline: none;
         }
+        border-top-left-radius:3rem;
+        border-bottom-left-radius:3rem;
         padding-left: 2rem;
         padding-right: 5rem;
+        padding-top : 0.6rem;
+        padding-bottom :0.6rem;
         font-size: 1.3rem;
       }
       svg {
