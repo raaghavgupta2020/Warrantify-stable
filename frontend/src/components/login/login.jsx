@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { ethers } from "ethers";
 import logo from "../../logo.svg";
+import metalogo from "../../components/metamask-unscreen.gif";
 
 function Login() {
 	const [haveMetamask, sethaveMetamask] = useState(true);
@@ -66,13 +67,13 @@ function Login() {
 
 						</div>
 					) : (
-						<img src={logo} className="App-logo" alt="logo" />
+						<img src={metalogo}  alt="logo" />
 					)}
 					{isConnected ? (
 						<p className="info text-white">🎉Connected Successfully🎉</p>
 					) : (
-						<button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 text-xl rounded" onClick={connectWallet}>
-							Connect
+						<button className="z-30 mb-24 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 text-xl rounded" onClick={connectWallet}>
+							Connect to Metamask Wallet
 						</button>
 					)}
 				</div>
