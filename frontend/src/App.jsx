@@ -12,13 +12,15 @@ import Common from "./Common";
 import creatorNFTMint from "./components/creatorNFTMint";
 import AdminItems from "./components/AdminItems";
 import UserNFT from "./components/UserNFT";
-
+import Start from "../src/starting/Start"
 class App extends Component {
 	render() {
 		return (
 			<div className="">
 				<Switch>
-					<Route exact path="/" component={Common} />
+					{/* <Route exact path="/" component={Common} /> */}
+					<Route exact path="/" component={Start} />
+					<Route exact path="/home" component={Common} />
 					<Route exact path="/loginuser" component={Login} />
 					<Route exact path="/logincreator" component={CreatorLogin} />
 					<Route exact path="/signupform" component={SignupForm} />

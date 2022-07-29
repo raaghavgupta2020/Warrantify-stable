@@ -24,6 +24,7 @@
 		"react-scripts": "^5.0.1",
 		"react-toastify": "^7.0.4",
 		"stable": "^0.1.8",
+		"styled-components": "^5.3.5",
 		"web-vitals": "^1.0.1",
 		"web3modal": "^1.9.8"
 	},
