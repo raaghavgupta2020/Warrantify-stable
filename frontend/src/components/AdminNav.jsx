@@ -1,5 +1,5 @@
 import React from "react";
-
+import {Link} from "react-router-dom";
 function AdminNav() {
     const addr = localStorage.getItem('wallet_address')
 
@@ -75,6 +75,12 @@ function AdminNav() {
                                     >
                                         Listed Products
                                     </a>
+                                    <Link
+                                        to="/landingPage"
+                                        class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium text-right"
+                                    >
+                                        Log Out
+                                    </Link>
                                 </div>
                             </div>
                         </div>
@@ -118,6 +124,12 @@ function AdminNav() {
                         >
                             Listed Products
                         </a>
+                        <Link
+                                        to="/landingPage"
+                                        class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium text-right"
+                                    >
+                                        Log Out
+                                    </Link>
                     </div>
                 </div>
             </nav>

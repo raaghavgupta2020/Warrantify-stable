@@ -59,10 +59,10 @@ function home() {
 					<div>
 						<h1 className="text-2xl font-bold mx-10 mt-5">TOP BRANDS</h1>
 						<section className="pb-10">
-							<div className="grid lg:grid-cols-3 grid-cols-1 md:px-4">
+							<div className="grid lg:grid-cols-3 grid-cols-1 md:px-4 ">
 								{nfts.map((nft, i) => (
 									<div className="w-full ">
-										<div className="my-4 md:mx-4 shadow p-6 rounded-md bg-white group hover:shadow-md">
+										<div className="my-4 md:mx-4 shadow p-6 rounded-md bg-white group hover:shadow-md bg-gradient-to-r from-indigo-200 to-fuchsia-300">
 											<div className="relative mb-6 w-full h-56 bg-purple-200 rounded-md overflow-hidden">
 												<img
 													src={nft.image}

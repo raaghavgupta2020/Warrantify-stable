@@ -1,5 +1,5 @@
 import React from "react";
-
+import {Link} from "react-router-dom";
 function UNavbar() {
 	const addr = localStorage.getItem('accountAddress')
 
@@ -66,6 +66,12 @@ function UNavbar() {
 									>
 										NFT Warranty cards
 									</a>
+									<Link
+                                        to="/landingPage"
+                                        class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium text-right"
+                                    >
+                                        Log Out
+                                    </Link>
 								</div>
 							</div>
 						</div>
@@ -102,6 +108,12 @@ function UNavbar() {
 						>
 							My NFTs
 						</a>
+						<Link
+                                        to="/landingPage"
+                                        class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium text-right"
+                                    >
+                                        Log Out
+                                    </Link>
 					</div>
 				</div>
 			</nav>

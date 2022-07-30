@@ -102,13 +102,13 @@ const Sidebar = (props) => {
     });
   }
   return (
-    <aside className="sticky top-0 bg-white md:mx-8 lg:mx-4 mb-8 p-6 shadow-md rounded-md -mt-40">
+    <aside className="sticky top-0 bg-white md:mx-8 lg:mx-4 mb-8 p-6 shadow-md rounded-md -mt-40 bg-gradient-to-r from-indigo-200 to-fuchsia-300">
       <div className="w-full h-3/4 rounded-md overflow-hidden mx-auto mb-5">
         <img src={image} alt="shafiqhammad" className="w-full" />
       </div>
-      <div className="text-center">
-        <h1 className="text-xl text-gray-800 font-bold mb-1"> {name}</h1>
-        <input className="mt-5 border rounded p-2" type="number" onChange={
+      <div className="text-center bg-gradient-to-r from-indigo-500 to-fuchsia-500">
+        <h1 className="text-xl text-gray-800 font-bold mb-1 "> {name}</h1>
+        <input className="mt-5 border rounded p-2 text-black" type="number" onChange={
           (e) => {
             setAmt(e.target.value)
           }
@@ -130,7 +130,7 @@ const Sidebar = (props) => {
         <h3 className="text-md mb-2 uppercase font-medium text-gray-800">
           About Us
         </h3>
-        <p className="text-gray-400 text font-light leading-relaxed">
+        <p className="text-gray-900 text leading-relaxed  ">
           {description}
         </p>
       </div>
