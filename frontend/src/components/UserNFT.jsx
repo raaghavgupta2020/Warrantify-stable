@@ -107,8 +107,11 @@ export default function UserNFT () {
                                                 <p><ins>◷</ins></p>
 
                                                 {
-                                                    
-                                                    x = Math.abs(date4-nft.date1)/60000
+                                                    date4 > nft.date1 ? (
+                                                        x = 0
+                                                    ) : (x = Math.abs(date4-nft.date1)/60000)
+
+                                                    // x = Math.abs(date4-nft.date1)/60000
                                                 }
                                                 <p>{x.toFixed(3).toString}</p>
                                                 
@@ -132,9 +135,9 @@ export default function UserNFT () {
                                         ) : (<p className='text-green-400 break-words mx-auto py-2 font-bold'>Resell Invalid</p>)} */}
 
 
-                                        {date4 > nft.date1 ? (
+                                        {/* {date4 > nft.date1 ? (
                                         <div className="text-red-500 mx-auto py-2 font-bold">Return Invalid</div>
-                                        ) : (<p className='text-green-400 break-words mx-auto py-2 font-bold'>Return Valid</p>)}
+                                        ) : (<p className='text-green-400 break-words mx-auto py-2 font-bold'>Return Valid</p>)} */}
 
                                                 {/* <p>bought: {nft.date1}</p>
                                                 <p>expiry: {nft.date2}</p>
@@ -142,8 +145,8 @@ export default function UserNFT () {
                                         <hr />
 
                                         <div className="flex ">
-                                            <button type="button" className="p-1 border rounded border-black-1 m-auto">Return</button>
-                                            <button type="button" className="p-1 border rounded border-black-1 m-auto">Resell</button>
+                                            <button type="button" className="p-1 border rounded border-black-1 m-auto">Return Request</button>
+                                            <button type="button" className="p-1 border rounded border-black-1 m-auto">Resell Request</button>
                                         </div>
                                          
                                     </div>
