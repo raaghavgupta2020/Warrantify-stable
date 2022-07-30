@@ -1,6 +1,8 @@
 /* eslint-disable react/destructuring-assignment */
 import React from "react";
 // import '../../../home/home.css'
+import {Link} from "react-router-dom";
+
 import {
 	BrowserRouter as Router,
 	NavLink,
@@ -14,13 +16,14 @@ const navbarData = [
 	// {
 	// 	id: 3,
 	// 	title: "Highlights",
-	// 	to: "/works",
+	// 	to: "/landingPage",
 	// },
 	{
 		id: 4,
 		title: "Trending Products",
 		to: "/blogs",
-	},
+	}
+	
 ];
 
 function Navbar({ wallet_address }) {
@@ -35,8 +38,9 @@ function Navbar({ wallet_address }) {
 			</nav>
 
 			<Switch>
-				<Route path="/works">
-					<Portfolio />
+				<Route path="/landingPage">
+					{/* <Portfolio /> */}
+					{/* <landingPage/> */}
 				</Route>
 				<Route path="/blogs">
 					<Blog wallet_address={wallet_address}/>
