@@ -41,7 +41,7 @@ const BlogItem = (props) => {
 			<div class="price">
           <p className="text-black mx-2">Amount <br/>{price} ETH</p>
 		  </div>
-		  <p className="text-black mr-2 ">Warranty Period <br/> {expiry} hrs </p>
+		  <p className="text-black mr-2 ">Warranty Period <br/> {expiry} minutes </p>
 				
           {/* <button className="text-black border-2 rounded-lg pl-2 pr-2 bg-gradient-to-r from-indigo-200 to-fuchsia-300 " onClick={() => props.buyNft(props.blog)}>Buy Product</button> */}
 		  <button className="text-black font-bold px-2 -inset-0.5 bg-gradient-to-r from-pink-500 to-purple-500 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt" onClick={() => props.buyNft(props.blog)}>Buy Product</button>

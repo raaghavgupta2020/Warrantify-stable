@@ -69,7 +69,7 @@ const Blog = ( {wallet_address} ) => {
       value: price
     })
     await transaction.wait()
-	toast("NFT Purchased Successfully");
+	toast("Product purchased Successfully");
     loadNFTs()
   }
 	return (
