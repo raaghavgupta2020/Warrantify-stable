@@ -69,7 +69,7 @@ export default function UserNFT () {
             <UNavbar />
             <div className="flex justify-center">
                 <div className="p-1">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-1  ">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-14 pt-1  ">
                         {
                             nfts.map((nft, i) => (
 
@@ -107,6 +107,7 @@ export default function UserNFT () {
                                                 <p><ins>◷</ins></p>
 
                                                 {
+                                                    
                                                     x = Math.abs(date4-nft.date1)/60000
                                                 }
                                                 <p>{x.toFixed(3).toString}</p>
@@ -124,10 +125,26 @@ export default function UserNFT () {
                                         {date4 > nft.date1 ? (
                                             <div className="text-red-500 mx-auto py-2 font-bold">Warranty card Expired</div>
                                         ) : (<p className='text-green-400 break-words mx-auto py-2 font-bold'>Warranty card Valid</p>)}
-                                                <p>bought: {nft.date1}</p>
+
+
+                                        {/* {date4 > nft.date1 ? (
+                                        <div className="text-red-500 mx-auto py-2 font-bold">Resell Invalid</div>
+                                        ) : (<p className='text-green-400 break-words mx-auto py-2 font-bold'>Resell Invalid</p>)} */}
+
+
+                                        {date4 > nft.date1 ? (
+                                        <div className="text-red-500 mx-auto py-2 font-bold">Return Invalid</div>
+                                        ) : (<p className='text-green-400 break-words mx-auto py-2 font-bold'>Return Valid</p>)}
+
+                                                {/* <p>bought: {nft.date1}</p>
                                                 <p>expiry: {nft.date2}</p>
-                                                <p>now: {date4}</p>
+                                                <p>now: {date4}</p> */}
                                         <hr />
+
+                                        <div className="flex ">
+                                            <button type="button" className="p-1 border rounded border-black-1 m-auto">Return</button>
+                                            <button type="button" className="p-1 border rounded border-black-1 m-auto">Resell</button>
+                                        </div>
                                          
                                     </div>
                                 </div>
