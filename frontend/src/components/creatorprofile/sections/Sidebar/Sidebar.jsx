@@ -88,7 +88,7 @@ const Sidebar = (props) => {
       setTxs([tx]);
     } catch (err) {
       console.log(err)
-      toast("Donation UnSuccessful");
+      toast("Donation Unsuccessful");
     }
   };
 
@@ -107,7 +107,9 @@ const Sidebar = (props) => {
         <img src={image} alt="shafiqhammad" className="w-full" />
       </div>
       <div className="text-center bg-gradient-to-r from-indigo-500 to-fuchsia-500">
-        <h1 className="text-xl text-gray-800 font-bold mb-1 "> {name}</h1>
+        <h1 className="text-xl text-gray-800 font-bold mb-4 "> {name}</h1>
+        
+        <p className="font-bold text-xs text-black">Help your favourite brands to grow faster by donating</p>
         <input className="mt-5 border rounded p-2 text-black" type="number" onChange={
           (e) => {
             setAmt(e.target.value)

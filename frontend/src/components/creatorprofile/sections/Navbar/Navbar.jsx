@@ -22,7 +22,13 @@ const navbarData = [
 		id: 4,
 		title: "Trending Products",
 		to: "/blogs",
-	}
+	},
+	// {
+	// 	id: 5,
+	// 	title: "Back",
+	// 	to: "/home",
+	// }
+
 	
 ];
 
@@ -40,6 +46,7 @@ function Navbar({ wallet_address }) {
 			<Switch>
 				<Route path="/landingPage">
 					{/* <Portfolio /> */}
+					
 					{/* <landingPage/> */}
 				</Route>
 				<Route path="/blogs">

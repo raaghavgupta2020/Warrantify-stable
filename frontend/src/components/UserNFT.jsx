@@ -87,13 +87,13 @@ export default function UserNFT () {
                                 <div key={i} class="nft">
                                     <div class='main'>
                                         <img class='tokenImage ml-6 object-contain h-32' src={nft.image} alt="NFT" />
-                                        {/* <h2>Name: Gaandu</h2> */}
-                                        <p class='description break-words'>Owner: {nft.wallet_address} </p>
+                                        
+                                        <p class='description break-words'>Seller: {nft.wallet_address} </p>
                                         {
                                             date4 > nft.date1 ? (
-                                                 <p class='description break-words'>Seller: 0x00000000000000 </p>
+                                                 <p class='description break-words'>Owner: 0x00000000000000 </p>
                                             ): (
-                                                <p class='description break-words'>Seller: {nft.owner} </p>
+                                                <p class='description break-words'>Owner: {nft.owner} </p>
                                             )
                                         }
                                         <div class='tokenInfo'>
@@ -116,12 +116,31 @@ export default function UserNFT () {
                                         </div>
                                         {date4 > nft.date1 ? (
                                             <div className="text-red-500">Expired</div>
-                                        ) : (<p class='description break-words'>Valid</p>)}
+                                        ) : (<p class='text-green-500 description break-words'>Valid</p>)}
                                         <p>bought: {nft.date1}</p>
                                                 <p>expiry: {nft.date2}</p>
                                                 <p>now: {date4}</p>
                                         <hr />
-                                        
+{/*                                         
+                                        {date4 > nft.date1 ? (
+                                            <a href="/not applica">Resale</a>
+                                           
+                                        ) : (<p class='text-green-500 description break-words'>Repair </p>)}
+                                        <p>bought: {nft.date1}</p>
+                                                <p>expiry: {nft.date2}</p>
+                                                <p>now: {date4}</p>
+                                        <hr />
+                                        //  */}
+{/* {date4 > nft.date1 ? (
+                                            <a href="/not applica">Resale</a>
+
+                                           
+                                        ) : (<p class='text-green-500 description break-words'>Repair </p>)}
+                                        <p>bought: {nft.date1}</p>
+                                                <p>expiry: {nft.date2}</p>
+                                                <p>now: {date4}</p>
+                                        <hr /> */}
+                                         
                                     </div>
                                 </div>
 
