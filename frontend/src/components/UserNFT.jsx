@@ -6,6 +6,11 @@ import axios from 'axios'
 import Web3Modal from 'web3modal'
 import UNavbar from './UNavbar'
 import '../components/nft_card.css'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import Start from "../starting/Start"
+import { Link } from "react-router-dom"
+toast.configure()
 
 import {
     marketplaceAddress
@@ -15,7 +20,16 @@ import NFTMarketplace from '../blockchain/artifacts/contracts/NFTMarketplace.sol
 
 let x = 0;
 
+function handleReturn(e) {
+    toast("Expired already");
+}
+function handleReturn1(e) {
+    toast("Return initiated");
+}
+
 export default function UserNFT () {
+    // let navigate=useNavigate();
+    let [openModal,setOpenModal]=useState('')
     const [date3, setDate3] = useState(new Date())
     const [date4, setDate4] = useState(date3.getTime())
     
@@ -114,8 +128,8 @@ export default function UserNFT () {
                                                     // x = Math.abs(date4-nft.date1)/60000
                                                 }
                                                 <p>{x.toFixed(3).toString}</p>
-                                                
-
+                       
+                       
                                                 {/* <p>{nft.expiry}</p> */}
                                                 <br />
                                                 {console.log(Number(nft.expiry))}
@@ -145,16 +159,50 @@ export default function UserNFT () {
                                         <hr />
 
                                         <div className="flex ">
-                                            <button type="button" className="p-1 border rounded border-black-1 m-auto">Return Request</button>
-                                            <button type="button" className="p-1 border rounded border-black-1 m-auto">Resell Request</button>
+                                            <button type="button" className="p-1 border rounded border-black-1 m-auto" 
+                                            onClick={()=>
+                                                // console.log("hi")
+                                                // date4 > nft.date1 ? ({handleReturn}) : ({handleReturn1})
+                                                date4 > nft.date1 ?toast("Your warranty has already expired,can't proceed") : toast("Return request has been initiated")
+                                            }
+                                            >Return Request</button>
+                                            <button type="button" className="p-1 border rounded border-black-1 m-auto" 
+                                            onClick={()=>
+                                                // console.log("hi")
+                                                // date4 > nft.date1 ? ({handleReturn}) : ({handleReturn1})
+                                            date4 > nft.date1 ?toast("Your warranty has already expired,can't proceed") :toast("Resell")
+
+                                            }
+                                            >Resell Request</button>
+                                            {/* {openModal && <Link to="/landingPage" replace={true}></Link>} */}
                                         </div>
+                                        
+
+                                        {/* <div className="flex ">
+                                            <button type="button" className="p-1 border rounded border-black-1 m-auto" >Return Request</button>
+                                            <button type="button" className="p-1 border rounded border-black-1 m-auto" >Resell Request</button>
+                                        </div> */}
+
+                                        {/* {date4 > nft.date1 ? ({
+                                            
+                                        }) : ({
+
+                                        })} */}
+
+
+                                        
                                          
                                     </div>
+                                    
                                 </div>
+                                
 
 
                             ))
+                            
                         }
+                        
+                        
                     </div>
                 </div>
             </div>
