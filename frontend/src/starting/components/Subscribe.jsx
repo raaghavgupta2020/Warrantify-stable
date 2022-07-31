@@ -10,7 +10,7 @@ export default function Subscribe() {
       <div className="pt-20 content">
         <h2>Subscribe to get all new products updates</h2>
         <p>
-          To get updates about SSG Guarantee and more 
+          To get updates about warranty program and more 
           Subscribe to our newsletter and stay Updated!
         </p>
         <div className="input-container">
