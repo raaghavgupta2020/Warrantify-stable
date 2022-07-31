@@ -1,4 +1,4 @@
-### <h1>Title - Blockchain based E-commerce warranty system using NFTS</h1>
+### <h1>Title - Blockchain based E-commerce warranty system using NFTs</h1>
 
 ## 🧐 Problem at hand 
 - The blockchain smart contract should allow users to prove ownership 
