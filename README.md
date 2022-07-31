@@ -74,4 +74,4 @@ Another way of releasing new products - NFT can provide a new format for releasi
 ## 👫 Contributors 
 * [Raghav Gupta](https://github.com/raaghavgupta2020)
 * [Hardik Nagpal](https://github.com/hardik0517)
-* [Manmeet Singh](https://github.com/)
+* [Manmeet Singh](https://github.com/manmeetsingh089)
