@@ -244,6 +244,7 @@ export default function UserNFT() {
                                             
                                             <button
                                                 // onClick={toast("Email Sent Successfully")}
+                                                onClick={() => toast("Email Sent Successfully")}
                                                 className="p-1 border rounded border-black-1 m-auto"  
                                             >
                                                 Send

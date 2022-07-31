@@ -72,6 +72,7 @@ export default function sample() {
 					/>
                     <button
 						// onClick={toast("Your return request successfully submitted")}
+                        onClick={() => toast("Your return request successfully submitted")}
 						className="font-bold mt-4 ml-48 bg-gray-800 text-white rounded p-4 pt-4 shadow-lg"
 					>
 						Submit
