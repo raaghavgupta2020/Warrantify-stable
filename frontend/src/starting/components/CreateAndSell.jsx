@@ -11,7 +11,7 @@ export default function CreateAndSell() {
       image: sell1,
       title: "About Warrantify",
       description:
-        "The Digital Warrant is a NET-based digital card that guarantees the products purchased from Warrantify.",
+        "The Digital Warrant is a NFT-based digital card that guarantees the products purchased from Warrantify.",
       
     },
     {
@@ -23,7 +23,7 @@ export default function CreateAndSell() {
     },
     {
       image: sell3,
-      title: "Resale your warranty card",
+      title: "Return or Resale your warranty card",
       description:
         "After purchasing the product you will be allowed to add friends, so that you can resale your digital warranty card",
       
