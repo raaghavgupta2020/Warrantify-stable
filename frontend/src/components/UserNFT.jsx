@@ -19,6 +19,7 @@ import {
 import NFTMarketplace from '../blockchain/artifacts/contracts/NFTMarketplace.sol/NFTMarketplace.json'
 
 let x = 0;
+let y = "";
 
 function handleReturn(e) {
     toast("Expired already");
@@ -103,6 +104,9 @@ export default function UserNFT () {
                                 <div key={i} class="nft">
                                     <div class='main'>
                                         <img class='tokenImage ml-6 object-contain h-32' src={nft.image} alt="NFT" />
+                                        <p class="break-words ">Product Number : {nft.tokenId}</p>
+                                        
+                                        <p class="break-words ">Unique product ID : {nft.tokenURI}</p>
                                         
                                         <p class='description break-words'>Seller: {nft.wallet_address} </p>
                                         {
@@ -129,7 +133,7 @@ export default function UserNFT () {
                                                 }
                                                 <p>{x.toFixed(3).toString}</p>
                        
-                       
+
                                                 {/* <p>{nft.expiry}</p> */}
                                                 <br />
                                                 {console.log(Number(nft.expiry))}
