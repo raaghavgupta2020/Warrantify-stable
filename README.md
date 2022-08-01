@@ -161,12 +161,12 @@ Transfer of Ownership - Transfer of ownership can be done using a simple GUI . A
 
 
 ## 👩🏻‍💻Tech Stack
-Solidity (Writing Smart Contract)
-Javascript (React & Testing)
-Ethers (Blockchain Interaction)
-Hardhat (Development Framework)
-Ipfs (Metadata storage)
-React routers (Navigational components)
+Solidity (Writing Smart Contract)</br>
+Javascript (React & Testing)</br>
+Ethers (Blockchain Interaction)</br>
+Hardhat (Development Framework)</br>
+Ipfs (Metadata storage)</br>
+React routers (Navigational components)</br>
 ERC721 NFT standard </br>
 React  , Tailwind CSS , EmailJS , styled components ,... </br>
 Polygon (for deploying smart contracts)</br>
