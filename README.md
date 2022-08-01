@@ -2,7 +2,7 @@
 
 ### <h1>How to run on local host</h1>
 #### (Local setup)
-To run this project locally, follow these steps.
+To run this project locally, follow these steps "CAREFULLY".
 
 1. Clone the project locally, change into the directory, and install the dependencies:
 
@@ -34,7 +34,20 @@ cd frontend/src/blockchain
 npx hardhat node
 ```
 
-Around 20 accounts with private keys will be provided by hardhat .Use the private key of any of the provided accounts to Import the account using "Import Account" option in the metamask wallet. 
+Around 20 accounts with private keys will be provided by hardhat 
+
+### Connect development blockchain accounts to Metamask
+If you have not added "localhost" to the list of networks on your metamask, 
+open up a browser, 
+click the fox icon, 
+then click the top center dropdown button that lists all the available networks then click add networks. 
+A form should pop up. For the "Network Name" field enter "localhost". 
+For the "New RPC URL" field enter "http://127.0.0.1:8545/". 
+For the chain ID enter "1337". 
+For currency symbol , enter "ETH"
+Then click save
+
+Now , Copy the private key of any of the provided accounts by the previous command "npx hardhat node" and Import an account using "Import Account" option in the metamask wallet. 
 
 3. Next, keep the node running and open a separate terminal window to deploy the contract.
 In a separate window, run the following command:
