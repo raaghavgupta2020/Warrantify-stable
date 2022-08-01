@@ -61,7 +61,7 @@ or
 npm run dev
 ```
 
-### Configuration
+### Configuration (POLYGON)
 
 To deploy to Polygon test or main networks, update the configurations located in __hardhat.config.js__ to use a private key and, optionally, deploy to a private RPC like Infura.
 
@@ -134,6 +134,7 @@ P7 - Reduce warranties on expired products: A bad acting authorized dealer could
 
 P8 - Donation: Buyers can also help their favourite brands to grow by Donating any amount to the company . This use case can literally change lives . Many of the brands are doing good work in association with certain NGOs , such as Save Dogs merchandise , Climate change issues merchandise , This feature will help them gain the required funds faster than ever before.
 
+
 ## 🙌🏻 Our Solution
 Eliminating the physical receipt or warranty card as the warranty document is easily falsifiable, is not necessarily standard among different sellers and a bad acting authorized dealer might issue warranty cards for expired products "under the table" - Sellers can use a very simple GUI for listing their companies and uploading various products along with inputs like product image , product video , description , amount , warranty period and much more . Buyers can view all the companies and the products under each company along with all the details attached to the product . As soon as the buyer buys a product , a digital NFT warranty card will be created itself with the remaining warranty time. This will be the symbol of ownership for each buyer. It’ll contain information such as the previous owner (i.e , the company’s wallet address) , new owner (i.e, the buyer’s wallet address) and it will symbolize the remaining time for which the product’s warranty is valid.
 
@@ -147,17 +148,17 @@ Transfer of Ownership - Transfer of ownership can be done using a simple GUI . A
 
 
 ## 👩🏻‍💻Tech Stack
+Solidity (Writing Smart Contract)
+Javascript (React & Testing)
+Ethers (Blockchain Interaction)
+Hardhat (Development Framework)
+Ipfs (Metadata storage)
+React routers (Navigational components)
 ERC721 NFT standard </br>
-React  , Tailwind CSS , EmailJS , React styled components </br>
-IPFS</br>
-Solidity</br>
-Smart Contracts </br>
+React  , Tailwind CSS , EmailJS , styled components ,... </br>
 Polygon (for deploying smart contracts)</br>
-Ethereum Ecosystem</br>
 Symbl.ai (for video shortening )</br>
-nltk</br>
-Metamask</br>
-Netlify (for hosting)</br>
+Metamask Wallet</br>
 
  
 ## ✨ Future Scope
