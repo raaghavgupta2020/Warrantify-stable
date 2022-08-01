@@ -1,5 +1,110 @@
 ### <h1>Title - Blockchain based E-commerce warranty system using NFTs</h1>
 
+### <h1>How to run on local host</h1>
+#### (Local setup)
+To run this project locally, follow these steps.
+
+1. Clone the project locally, change into the directory, and install the dependencies:
+
+```sh
+git clone https://github.com/raaghavgupta2020/Warrantify-stable.git
+
+# Open new terminal
+
+cd frontend
+
+npm i
+
+# Open new terminal
+
+cd frontend/src/blockchain
+
+npm i
+
+```
+
+2. Start the local Hardhat node 
+
+```sh
+
+# Open new terminal
+
+cd frontend/src/blockchain
+
+npx hardhat node
+```
+
+Around 20 accounts with private keys will be provided by hardhat .Use the private key of any of the provided accounts to Import the account using "Import Account" option in the metamask wallet. 
+
+3. Next, keep the node running and open a separate terminal window to deploy the contract.
+In a separate window, run the following command:
+
+```sh
+# Open new terminal
+
+cd frontend/src/blockchain
+
+npx hardhat run scripts/deploy.js --network localhost
+```
+
+4. Start the app
+
+```
+# Open new terminal
+
+cd frontend
+
+npm start 
+
+or 
+
+npm run dev
+```
+
+### Configuration
+
+To deploy to Polygon test or main networks, update the configurations located in __hardhat.config.js__ to use a private key and, optionally, deploy to a private RPC like Infura.
+
+```javascript
+require("@nomiclabs/hardhat-waffle");
+const fs = require('fs');
+const privateKey = fs.readFileSync(".secret").toString().trim() || "01234567890123456789";
+
+// infuraId is optional if you are using Infura RPC
+const infuraId = fs.readFileSync(".infuraid").toString().trim() || "";
+
+module.exports = {
+  defaultNetwork: "hardhat",
+  networks: {
+    hardhat: {
+      chainId: 1337
+    },
+    mumbai: {
+      // Infura
+      // url: `https://polygon-mumbai.infura.io/v3/${infuraId}`
+      url: "https://rpc-mumbai.matic.today",
+      accounts: [privateKey]
+    },
+    matic: {
+      // Infura
+      // url: `https://polygon-mainnet.infura.io/v3/${infuraId}`,
+      url: "https://rpc-mainnet.maticvigil.com",
+      accounts: [privateKey]
+    }
+  },
+  solidity: {
+    version: "0.8.4",
+    settings: {
+      optimizer: {
+        enabled: true,
+        runs: 200
+      }
+    }
+  }
+};
+```
+
+
 ## 🧐 Problem at hand 
 - The blockchain smart contract should allow users to prove ownership 
 - Provide the purchasing history, warranty period, and other item information
@@ -42,17 +147,17 @@ Transfer of Ownership - Transfer of ownership can be done using a simple GUI . A
 
 
 ## 👩🏻‍💻Tech Stack
-ERC721 NFT standard
-React Tailwind CSS
-IPFS
-Solidity
-Smart Contracts 
-Polygon (for deploying smart contracts)
-Ethereum Ecosystem
-Symbl.ai (for video shortening )
-nltk
-Metamask
-Netlify (for hosting)
+ERC721 NFT standard </br>
+React  , Tailwind CSS , EmailJS , React styled components </br>
+IPFS</br>
+Solidity</br>
+Smart Contracts </br>
+Polygon (for deploying smart contracts)</br>
+Ethereum Ecosystem</br>
+Symbl.ai (for video shortening )</br>
+nltk</br>
+Metamask</br>
+Netlify (for hosting)</br>
 
  
 ## ✨ Future Scope
