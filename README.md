@@ -1,6 +1,6 @@
 ### <h1>Title - Blockchain based E-commerce warranty system using NFTs</h1>
 
-### <h1>How to run on local host</h1>
+### <h1> 👩🏻‍💻 To run on local host </h1>
 #### (Local setup)
 To run this project locally, follow these steps "CAREFULLY".
 
