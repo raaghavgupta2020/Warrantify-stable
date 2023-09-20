@@ -9,7 +9,7 @@ import Creatorcard from "../Creatorcard";
 import { ethers } from "ethers";
 import axios from "axios";
 import Web3Modal from "web3modal";
-import { creatorAddress } from "../../config";
+import { creatorAddress } from "../../config.js";
 import CreatorNFT from "../../blockchain/artifacts/contracts/CreatorNFT.sol/CreatorNFT.json";
 // import '../home/home.css'
 
@@ -20,8 +20,9 @@ function home() {
 		loadNFTs();
 	}, []);
 	async function loadNFTs() {
-		const provider = new ethers.providers.JsonRpcProvider();
-		const contract = new ethers.Contract(
+const provider = new ethers.providers.JsonRpcProvider(
+  "https://rpc-mumbai.maticvigil.com/"
+);		const contract = new ethers.Contract(
 			creatorAddress,
 			CreatorNFT.abi,
 			provider
