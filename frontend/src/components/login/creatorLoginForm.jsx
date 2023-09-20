@@ -1,12 +1,26 @@
 import { useState } from "react";
 import { ethers } from "ethers";
-import { create as ipfsHttpClient } from "ipfs-http-client";
+import { create as ipfsClient } from "ipfs-http-client";
 import Web3Modal from "web3modal";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import create from "../../blockchain/artifacts/contracts/CreatorNFT.sol/CreatorNFT.json";
+import { Buffer } from 'buffer'; 
+window.Buffer = Buffer;
 
-const client = ipfsHttpClient("https://ipfs.infura.io:5001/api/v0");
+const projectId = '2DUSiZ1uyhnsaYScq8viuDHP5KU'
+const projectSecret = '40e47177e103027c757624ec5d37fdc2'
+const auth = 'Basic ' + Buffer.from(projectId + ':' + projectSecret).toString('base64');
 
+ const client = ipfsClient({
+    host: 'ipfs.infura.io',
+    port: 5001,
+    protocol: 'https',
+    apiPath: '/api/v0',
+    headers: {
+      authorization: auth
+    }
+  })
 import { creatorAddress } from "../../blockchain/config";
 
 import CreatorNFT from "../../blockchain/artifacts/contracts/CreatorNFT.sol/CreatorNFT.json";
@@ -29,7 +43,7 @@ export default function SignupForm() {
 			const added = await client.add(file, {
 				progress: (prog) => console.log(`received: ${prog}`),
 			});
-			const url = `https://ipfs.infura.io/ipfs/${added.path}`;
+			const url = `https://kryptifi.infura-ipfs.io/ipfs/${added.path}`;
 			console.log(url);
 			setFileUrl(url);
 		} catch (error) {
@@ -49,7 +63,7 @@ export default function SignupForm() {
 		});
 		try {
 			const added = await client.add(data);
-			const url = `https://ipfs.infura.io/ipfs/${added.path}`;
+			const url = `https://kryptifi.infura-ipfs.io/ipfs/${added.path}`;
 			/* after file is uploaded to IPFS, return the URL to use it in the transaction */
 			return url;
 		} catch (error) {
