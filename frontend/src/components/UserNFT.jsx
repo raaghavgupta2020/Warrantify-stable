@@ -161,7 +161,7 @@ export default function UserNFT() {
                       maxWidth: "100%",
                       width: "100%",
                     }}
-                    value={`https://localhost:3000/qr/${nft.cid}`}
+                    value={`https://warrantify.vercel.app/qr/${nft.cid}`}
                     viewBox={`0 0 20 20`}
                   />
                   {/* <p class="break-words ">Unique product ID : {y}</p> */}
