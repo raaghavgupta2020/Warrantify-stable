@@ -1,6 +1,7 @@
 import { ethers } from "ethers";
 import { useEffect, useState } from "react";
 // import Countdown from './CountDown'
+import "./nft_card.css";
 import Countdown from "react-countdown";
 import emailjs from "emailjs-com";
 import axios from "axios";
