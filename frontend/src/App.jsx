@@ -14,6 +14,7 @@ import AdminItems from "./components/AdminItems";
 import UserNFT from "./components/UserNFT";
 import Start from "../src/starting/Start"
 import sample from "./sample";
+import DynamicCard from "./components/DynamicCard";
 // import { Resale } from "./Resale";
 import Resale from "./Resale";
 class App extends Component {
@@ -23,6 +24,7 @@ class App extends Component {
 				<Switch>
 					{/* <Route exact path="/" component={Common} /> */}
 					<Route exact path="/" component={Start} />
+					<Route exact path="/qr/:id" component={DynamicCard} />
 					<Route exact path="/landingPage" component={Common} />
 					<Route exact path="/loginuser" component={Login} />
 					<Route exact path="/logincreator" component={CreatorLogin} />

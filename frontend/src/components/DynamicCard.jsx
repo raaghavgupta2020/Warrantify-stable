@@ -19,7 +19,7 @@ import {
   Router,
 } from "react-router-dom";
 import QRCode from "react-qr-code";
-
+import { useParams } from "react-router-dom";
 toast.configure();
 
 import { marketplaceAddress } from "../blockchain/config";
@@ -36,7 +36,10 @@ function handleReturn1(e) {
   toast("Return initiated");
 }
 
-export default function UserNFT() {
+export default function DynamicCard() {
+  // get cid from params
+  const { id } = useParams();
+
   let [formInput, updateFormInput] = useState({
     email: "",
     pprice: "",
@@ -79,47 +82,19 @@ export default function UserNFT() {
     loadNFTs();
   }, []);
   async function loadNFTs() {
-    const web3Modal = new Web3Modal({
-      network: "mainnet",
-      cacheProvider: true,
-    });
-    const connection = await web3Modal.connect();
-    const provider = new ethers.providers.Web3Provider(connection);
-    const signer = provider.getSigner();
-
-    const marketplaceContract = new ethers.Contract(
-      marketplaceAddress,
-      NFTMarketplace.abi,
-      signer
-    );
-    const data = await marketplaceContract.fetchMyNFTs();
-    // const timerem = await marketplaceContract.getTimeLeft()
-    // const timerem1 = await marketplaceContract.getTimeLeft()
-    // const timerem2 = await marketplaceContract.getTimeLeft()
-    // const timerem3 = await marketplaceContract.getTimeLeft()
-    // console.log("timerem" + timerem)
-    const items = await Promise.all(
-      data.map(async (i) => {
-        const tokenURI = await marketplaceContract.tokenURI(i.tokenId);
-        const meta = await axios.get(tokenURI);
-        let price = ethers.utils.formatUnits(i.price.toString(), "ether");
-        let item = {
-          price,
-          tokenId: i.tokenId.toNumber(),
-          seller: i.seller,
-          owner: i.owner,
-          image: meta.data.image,
-          wallet_address: meta.data.wallet_address,
-          tokenURI,
-          expiry: meta.data.expiry,
-          date1: meta.data.date1,
-          date2: meta.data.date2,
-          cid: tokenURI.split("/")[4],
-        };
-        return item;
-      })
-    );
-    setNfts(items);
+    const tokenURI = `https://kryptifi.infura-ipfs.io/ipfs/${id}`;
+    const meta = await axios.get(tokenURI);
+    let item = {
+      owner: meta.data.wallet_address,
+      image: meta.data.image,
+      wallet_address: meta.data.wallet_address,
+      tokenURI,
+      expiry: meta.data.expiry,
+      date1: meta.data.date1,
+      date2: meta.data.date2,
+    };
+    console.log(item);
+    setNfts([item]);
     setLoadingState("loaded");
   }
 
@@ -143,14 +118,13 @@ export default function UserNFT() {
               //     </div>
               // </div>
 
-              <div key={i} class="nft">
+              <div class="nft">
                 <div class="main">
                   <img
                     class="tokenImage ml-6 object-contain h-32"
                     src={nft.image}
                     alt="NFT"
                   />
-                  <p class="break-words ">Product Number : {nft.tokenId}</p>
                   {/* {y = y  + nft.tokenURI}
                                         {y = y.substring(25,50)} */}
                   <p class="break-words ">Unique product QR</p>
@@ -161,18 +135,13 @@ export default function UserNFT() {
                       maxWidth: "100%",
                       width: "100%",
                     }}
-                    value={`https://localhost:3000/qr/${nft.cid}`}
+                    value={nft.tokenURI}
                     viewBox={`0 0 20 20`}
                   />
                   {/* <p class="break-words ">Unique product ID : {y}</p> */}
                   {/* <p class='break-words'>{y}</p> */}
 
                   <p>{x.toFixed(3).toString}</p>
-                  {console.log(typeof nft.tokenURI)}
-
-                  <p class="description break-words">
-                    Seller: {nft.wallet_address}{" "}
-                  </p>
 
                   {date4 > nft.date1 ? (
                     <p class="description break-words">
@@ -182,10 +151,6 @@ export default function UserNFT() {
                     <p class="description break-words">Owner: {nft.owner} </p>
                   )}
                   <div class="tokenInfo">
-                    <div class="price">
-                      <ins>◘</ins>
-                      <p>{nft.price} ETH</p>
-                    </div>
                     <div class="duration">
                       <p>
                         <ins>◷</ins>
