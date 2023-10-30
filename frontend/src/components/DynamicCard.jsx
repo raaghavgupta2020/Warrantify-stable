@@ -190,7 +190,7 @@ export default function DynamicCard() {
                   <hr />
 
                   <div className="flex ">
-                    <button
+                    {/* <button
                       type="button"
                       className="p-1 border rounded border-black-1 m-auto"
                       onClick={
@@ -219,8 +219,8 @@ export default function DynamicCard() {
                       }
                     >
                       Return Request
-                    </button>
-                    <button
+                    </button> */}
+                    {/* <button
                       type="button"
                       className="p-1 border rounded border-black-1 m-auto"
                       onClick={() =>
@@ -234,7 +234,7 @@ export default function DynamicCard() {
                       }
                     >
                       Resell Request
-                    </button>
+                    </button> */}
                     {/* {openModal && <Link to="/landingPage" replace={true}></Link>} */}
                   </div>
 
