@@ -103,6 +103,7 @@ export default function DynamicCard() {
     return <h1 className="py-10 px-20 text-3xl">No valid warranty cards</h1>;
   return (
     <>
+      {/* <UNavbar /> */}
       <div className="flex justify-center">
         <div className="p-1">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-14 pt-1  ">
