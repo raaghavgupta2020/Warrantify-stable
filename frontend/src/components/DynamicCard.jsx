@@ -146,7 +146,7 @@ export default function DynamicCard() {
                   )} */}
                   <div class="tokenInfo">
                     <div class="duration">
-                      <p>
+                      <p> Validity
                         <ins>◷</ins>
                       </p>
 
