@@ -57,6 +57,8 @@ export default function NFTMarketplaceMint() {
 		const { name, description, price, expiry } = formInput;
 		if (!name || !description || !price || !fileUrl) return;
 		/* first, upload to IPFS */
+		console.log("date1" + date1);
+		console.log("date2" + date2);
 		const data = JSON.stringify({
 			name,
 			description,
@@ -194,6 +196,13 @@ export default function NFTMarketplaceMint() {
 						name="Asset"
 						className="my-4 text-white"
 						onChange={onChange}
+					/>
+					<h1 className="mt-4 font-bold leading-normal text-white">Upload product QR</h1>
+
+					<input 
+						type="file"
+						name="Asset2"
+						className="my-4 text-white"
 					/>
 					{fileUrl &&
 						(nfttype == 1 ? (

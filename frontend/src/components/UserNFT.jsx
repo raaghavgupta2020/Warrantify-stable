@@ -146,15 +146,13 @@ export default function UserNFT() {
 
               <div key={i} class="nft">
                 <div class="main">
-                  <img
+                  {/* <img
                     class="tokenImage ml-6 object-contain h-32"
                     src={nft.image}
                     alt="NFT"
-                  />
+                  /> */}
                   <p class="break-words ">Product Number : {nft.tokenId}</p>
-                  {/* {y = y  + nft.tokenURI}
-                                        {y = y.substring(25,50)} */}
-                  <p class="break-words ">Unique product QR</p>
+                  
                   <QRCode
                     size={20}
                     style={{

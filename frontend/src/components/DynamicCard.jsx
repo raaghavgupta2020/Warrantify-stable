@@ -86,7 +86,7 @@ export default function DynamicCard() {
     const tokenURI = `https://kryptifi.infura-ipfs.io/ipfs/${id}`;
     const meta = await axios.get(tokenURI);
     let item = {
-      owner: meta.data.wallet_address,
+      seller: meta.data.wallet_address,
       image: meta.data.image,
       wallet_address: meta.data.wallet_address,
       tokenURI,
@@ -103,7 +103,6 @@ export default function DynamicCard() {
     return <h1 className="py-10 px-20 text-3xl">No valid warranty cards</h1>;
   return (
     <>
-      <UNavbar />
       <div className="flex justify-center">
         <div className="p-1">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-14 pt-1  ">
@@ -128,29 +127,22 @@ export default function DynamicCard() {
                   />
                   {/* {y = y  + nft.tokenURI}
                                         {y = y.substring(25,50)} */}
-                  <p class="break-words ">Unique product QR</p>
-                  <QRCode
-                    size={20}
-                    style={{
-                      height: "auto",
-                      maxWidth: "100%",
-                      width: "100%",
-                    }}
-                    value={nft.tokenURI}
-                    viewBox={`0 0 20 20`}
-                  />
+
                   {/* <p class="break-words ">Unique product ID : {y}</p> */}
                   {/* <p class='break-words'>{y}</p> */}
 
                   <p>{x.toFixed(3).toString}</p>
+                  <p class="description break-words">
+                    Seller: {nft.wallet_address}{" "}
+                  </p>
 
-                  {date4 > nft.date1 ? (
+                  {/* {date4 > nft.date1 ? (
                     <p class="description break-words">
                       Owner: 0x0000000000000000000000000000000000000000{" "}
                     </p>
                   ) : (
                     <p class="description break-words">Owner: {nft.owner} </p>
-                  )}
+                  )} */}
                   <div class="tokenInfo">
                     <div class="duration">
                       <p>
