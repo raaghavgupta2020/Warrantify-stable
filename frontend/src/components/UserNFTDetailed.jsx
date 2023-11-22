@@ -150,7 +150,7 @@ export default function UserNFTDetailed() {
                   <p class="break-words ">Product Number : {nft.tokenId}</p>
                   {/* {y = y  + nft.tokenURI}
                                         {y = y.substring(25,50)} */}
-                  <p class="break-words ">Unique product ID : {nft.tokenURI}</p>
+                  {/* <p class="break-words ">Unique product ID : {nft.tokenURI}</p> */}
                   {/* <p class="break-words ">Unique product ID : {y}</p> */}
                   {/* <p class='break-words'>{y}</p> */}
 
