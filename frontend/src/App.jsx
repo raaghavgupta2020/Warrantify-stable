@@ -17,6 +17,7 @@ import sample from "./sample";
 import DynamicCard from "./components/DynamicCard";
 // import { Resale } from "./Resale";
 import Resale from "./Resale";
+import UserNFTDetailed from "./components/UserNFTDetailed";
 class App extends Component {
 	render() {
 		return (
@@ -35,6 +36,7 @@ class App extends Component {
 					<Route path="/nftmint" component={creatorNFTMint} />
 					<Route path="/adminitems" component={AdminItems} />
 					<Route path="/usernfts" component={UserNFT} />
+					<Route path="/usernftsdetailed" component={UserNFTDetailed} />
 					<Route path="/repair" component={sample} />
 					<Route path="/resale" component={Resale}/>
 				</Switch>
